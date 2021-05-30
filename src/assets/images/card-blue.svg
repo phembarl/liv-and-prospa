@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="44px" viewBox="0 0 46 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle 2</title>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DASHBOARD-LANDING" transform="translate(-1281.000000, -219.000000)">
+            <g id="Group-43" transform="translate(390.000000, 199.000000)">
+                <g id="Group-18-Copy" transform="translate(492.000000, 0.000000)">
+                    <g id="Group-17" transform="translate(24.206897, 18.000000)">
+                        <g id="Rectangle-2" transform="translate(375.206897, 2.000000)">
+                            <rect id="Rectangle" fill="#00D2FF" opacity="0.100000001" x="0" y="0" width="44.3793103" height="44" rx="20"></rect>
+                            <path d="M31.0655172,13.2 L13.3137931,13.2 C12.0822672,13.2 11.1059224,14.179 11.1059224,15.4 L11.0948276,28.6 C11.0948276,29.821 12.0822672,30.8 13.3137931,30.8 L31.0655172,30.8 C32.2970431,30.8 33.2844828,29.821 33.2844828,28.6 L33.2844828,15.4 C33.2844828,14.179 32.2970431,13.2 31.0655172,13.2 Z M31.0655172,28.6 L13.3137931,28.6 L13.3137931,22 L31.0655172,22 L31.0655172,28.6 Z M31.0655172,17.6 L13.3137931,17.6 L13.3137931,15.4 L31.0655172,15.4 L31.0655172,17.6 Z" id="Shape" fill="#00D2FF" fill-rule="nonzero"></path>
+                            <g id="Group" transform="translate(18.861207, 14.300000)" fill="#BCBCB7">
+                                <path d="M0.877271016,1.01491351 L0.270413933,1.01491351 C0.254041566,0.958367568 0.244146179,0.898610811 0.241627353,0.836535135 L0.937003169,0.836535135 C0.922969711,0.896291892 0.903358854,0.95587027 0.877271016,1.01491351" id="Fill-16"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

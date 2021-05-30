@@ -13,6 +13,7 @@ const Button = ({ text, submit, className, onClick, disabled, ...props }: IProps
         className={`btn-primary ${className}`}
         onClick={onClick}
         disabled={disabled}
+        style={{ width: submit ? '100%' : 'inherit' }}
         {...props}
     >
         {text}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DASHBOARD-LANDING" transform="translate(-959.000000, -716.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="Group-43" transform="translate(390.000000, 199.000000)">
+                <g id="Group-40" transform="translate(0.000000, 198.000000)">
+                    <g id="Group-18-Copy-2" transform="translate(540.000000, 0.000000)">
+                        <g id="Group-25" transform="translate(24.000000, 104.000000)">
+                            <g id="Group-29" transform="translate(0.000000, 210.000000)">
+                                <path d="M19,12 C19,8.136 15.864,5 12,5 C8.136,5 5,8.136 5,12 C5,15.864 8.136,19 12,19 C15.864,19 19,15.864 19,12 Z M14.1,8.15 L16.55,10.6 L14.1,13.05 L14.1,11.3 L11.3,11.3 L11.3,9.9 L14.1,9.9 L14.1,8.15 Z M9.9,15.85 L7.45,13.4 L9.9,10.95 L9.9,12.7 L12.7,12.7 L12.7,14.1 L9.9,14.1 L9.9,15.85 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
