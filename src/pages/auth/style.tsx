@@ -6,7 +6,7 @@ export const AuthContainer = styled.div`
     .form-title {
         font-family: ${({ theme }) => theme.fonts?.brFirmaSemiBold};
         font-size: 25px;
-        color: #1b003b;
+        color: ${({ theme }) => theme.colors?.purpleText};
     }
 
     .form-description {
@@ -25,7 +25,7 @@ export const AuthContainer = styled.div`
 
 export const AuthHint = styled.div`
     text-align: right;
-    color: #1c1335;
+    color: ${({ theme }) => theme.colors?.purpleDark};
     font-family: ${({ theme }) => theme.fonts?.brFirmaSemiBold};
 
     .hint-action {
