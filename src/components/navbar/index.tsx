@@ -30,6 +30,7 @@ const Bell = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 `;
 
 const Avi = styled.nav`

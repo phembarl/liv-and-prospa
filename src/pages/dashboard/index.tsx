@@ -6,6 +6,7 @@ import AccountCard from 'components/account-card';
 import CardPurple from 'assets/images/card-purple.svg';
 import CardBlue from 'assets/images/card-blue.svg';
 import CashOutflow from 'components/cash-outflow';
+import GraphCard from 'components/graph-card';
 
 const Dashboard = () => (
     <DashBoardWrapper>
@@ -41,7 +42,7 @@ const Dashboard = () => (
                 </Accounts>
 
                 <Charts>
-                    <div>Graph goes here</div>
+                    <GraphCard />
                     <CashOutflow />
                 </Charts>
             </Body>
