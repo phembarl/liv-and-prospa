@@ -5,7 +5,7 @@ import MarketingIcon from 'assets/images/prospa-marketing.svg';
 import TransferIcon from 'assets/images/prospa-transfer.svg';
 import ProgressBar from '@ramonak/react-progress-bar';
 
-const Wrapper = styled.div`
+export const CashWrapper = styled.div`
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(131, 151, 171, 0.16);
     width: 43%;
@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 
     .title {
         font-family: ${({ theme }) => theme.fonts?.brFirmaSemiBold};
+        color: ${({ theme }) => theme.colors?.purpleDark};
         font-size: 18px;
     }
 
@@ -61,7 +62,7 @@ const ProgressDiv = styled.div`
 `;
 
 const CashOutflow = () => (
-    <Wrapper>
+    <CashWrapper>
         <p className="title">Cash outflow</p>
 
         <Body>
@@ -75,7 +76,7 @@ const CashOutflow = () => (
                 <ProgressDiv>
                     <p className="value">- N250,000</p>
                     <ProgressBar
-                        height="4px"
+                        height="6px"
                         bgColor="#FFCF56"
                         completed={String(90)}
                         width="100%"
@@ -97,7 +98,7 @@ const CashOutflow = () => (
                 <ProgressDiv>
                     <p className="value">- N250,000</p>
                     <ProgressBar
-                        height="4px"
+                        height="6px"
                         bgColor="#FFCF56"
                         completed={String(70)}
                         width="100%"
@@ -119,7 +120,7 @@ const CashOutflow = () => (
                 <ProgressDiv>
                     <p className="value">- N250,000</p>
                     <ProgressBar
-                        height="4px"
+                        height="6px"
                         bgColor="#FFCF56"
                         completed={String(50)}
                         width="100%"
@@ -141,7 +142,7 @@ const CashOutflow = () => (
                 <ProgressDiv>
                     <p className="value">- N250,000</p>
                     <ProgressBar
-                        height="4px"
+                        height="6px"
                         bgColor="#FFCF56"
                         completed={String(30)}
                         width="100%"
@@ -153,7 +154,7 @@ const CashOutflow = () => (
                 </ProgressDiv>
             </CashInfo>
         </Body>
-    </Wrapper>
+    </CashWrapper>
 );
 
 export default CashOutflow;

@@ -1,4 +1,6 @@
 import styled from '@emotion/styled/macro';
+import { CashWrapper } from 'components/cash-outflow';
+import { GraphWrapper } from 'components/graph-card';
 import { AccountWrapper } from '../../components/account-card/index';
 
 export const DashboardContainer = styled.div`
@@ -14,6 +16,10 @@ export const DashboardContainer = styled.div`
 
 export const Body = styled.div`
     padding: 2em 3.5em;
+
+    @media (max-width: 500px) {
+        padding: 2em 1.5em;
+    }
 `;
 
 export const WelcomeDiv = styled.div`
@@ -76,4 +82,24 @@ export const Accounts = styled.div`
 export const Charts = styled.div`
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: 850px) and (max-width: 1024px) {
+        display: initial;
+        width: 100%;
+
+        ${CashWrapper}, ${GraphWrapper} {
+            width: 100%;
+            margin-top: 1em;
+        }
+    }
+
+    @media (max-width: 750px) {
+        display: initial;
+        width: 100%;
+
+        ${CashWrapper}, ${GraphWrapper} {
+            width: 100%;
+            margin-top: 1em;
+        }
+    }
 `;
