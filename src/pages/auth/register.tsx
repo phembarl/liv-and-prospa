@@ -36,7 +36,7 @@ const Register = () => {
 
     const onSubmit = () => {
         reset();
-        history.push('/hello');
+        history.push('/create-business-account');
     };
 
     return (

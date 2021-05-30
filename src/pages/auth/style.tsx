@@ -14,6 +14,13 @@ export const AuthContainer = styled.div`
         font-size: 0.9em;
         margin-top: 0.3em;
     }
+
+    .option-description {
+        color: ${({ theme }) => theme.colors?.grey01};
+        font-size: 13px;
+        margin-top: 0.5em;
+        margin-bottom: 1.5em;
+    }
 `;
 
 export const AuthHint = styled.div`
@@ -29,7 +36,8 @@ export const AuthHint = styled.div`
 export const Main = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+    max-width: 376px;
+    margin: auto;
     text-align: left;
     margin-top: 10%;
 `;
@@ -40,5 +48,4 @@ export const FormContainer = styled.div`
 
 export const Form = styled.form`
     margin-top: 1.5em;
-    width: 100%;
 `;
