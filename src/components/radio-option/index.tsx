@@ -33,7 +33,7 @@ const InputRadio = styled.input`
     max-height: 22px;
     border-radius: 50%;
     outline: none;
-    border: 1px solid #eeeff7;
+    border: 1px solid ${({ theme }) => theme.colors?.grey03};
     display: flex;
     justify-content: center;
     align-items: center;

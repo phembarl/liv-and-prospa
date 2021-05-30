@@ -10,7 +10,7 @@ export const Input = styled.input`
     margin: auto;
     font-family: ${({ theme }) => theme.fonts?.brFirmaSemiBold};
     font-size: 1rem;
-    color: #1c1335;
+    color: ${({ theme }) => theme.colors?.purpleDark};
     padding: 23px 50px 5px 15px;
     width: 100%;
     border: none;
