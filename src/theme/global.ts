@@ -18,7 +18,7 @@ const globalStyles = css`
     }
 
     .error-msg {
-        color: #f75010;
+        color: #ed1c24;
         font-size: 0.65em;
         margin: 0.4em auto;
         font-weight: $medium;

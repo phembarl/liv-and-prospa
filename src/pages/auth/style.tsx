@@ -21,6 +21,10 @@ export const AuthContainer = styled.div`
         margin-top: 0.5em;
         margin-bottom: 1.5em;
     }
+
+    button[type='submit'] {
+        margin-top: 0.9em;
+    }
 `;
 
 export const AuthHint = styled.div`
