@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import styled from '@emotion/styled/macro';
 import BellIcon from 'assets/images/prospa-bell.svg';
+import MenuIcon from 'assets/images/menu-icon.svg';
 import Avatar from 'assets/images/avi.jpeg';
+import MobileMenu from 'components/side-bar/mobile-menu';
 
 const Navbar = styled.nav`
     background-color: #fff;
@@ -9,7 +12,13 @@ const Navbar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5em 3.5em;
+    padding: 0 3.5em;
+    height: 80px;
+    position: relative;
+
+    @media (max-width: 500px) {
+        padding-right: 1.5em;
+    }
 `;
 
 const Brand = styled.nav`
@@ -47,9 +56,27 @@ const Avi = styled.nav`
     }
 `;
 
+const Hamburger = styled.div`
+    position: absolute;
+    left: 1rem;
+    top: 40%;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 850px) {
+        display: initial;
+    }
+`;
+
 const NavBar = () => {
+    const [openSideDrawer, setOpenSideDrawer] = useState(false);
+    const onCloseSideDrawer = () => setOpenSideDrawer(false);
+    const toggleSideDrawer = () => setOpenSideDrawer((prevState) => !prevState);
     return (
         <Navbar>
+            <Hamburger onClick={toggleSideDrawer}>
+                <img src={MenuIcon} alt="toggle-sidebar" />
+            </Hamburger>
             <Brand className="brand">Dashboard</Brand>
             <BellAvi>
                 <Bell>
@@ -59,6 +86,7 @@ const NavBar = () => {
                     <img src={Avatar} alt="avatar" />
                 </Avi>
             </BellAvi>
+            <MobileMenu openSideDrawer={openSideDrawer} onCloseSideDrawer={onCloseSideDrawer} />
         </Navbar>
     );
 };

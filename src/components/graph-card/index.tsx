@@ -20,10 +20,19 @@ const SummaryContainer = styled.div`
     margin-top: 1em;
     display: flex;
     align-items: center;
+
+    @media (min-width: 850px) and (max-width: 1070px) {
+        display: initial;
+    }
+
+    @media (max-width: 800px) {
+        display: initial;
+    }
 `;
 
 const Summary = styled.div`
     margin-right: 2em;
+    margin-bottom: 0.5em;
     .summary-title {
         font-family: ${({ theme }) => theme.fonts?.brFirmaMedium};
         color: ${({ theme }) => theme.colors?.grey01};

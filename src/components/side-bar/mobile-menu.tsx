@@ -4,6 +4,7 @@ import InvoiceIcon from 'assets/images/invoice-icon.svg';
 import Logo from 'assets/images/prospa-logo-grey.svg';
 import CaretDown from 'assets/images/caret-down.svg';
 import { useEffect, useRef, useState } from 'react';
+import Modal from 'react-responsive-modal';
 
 export const Wrapper = styled.div`
     position: fixed;
@@ -11,7 +12,7 @@ export const Wrapper = styled.div`
     left: 0;
     background-color: ${({ theme }) => theme.colors?.white};
     color: ${({ theme }) => theme.colors?.grey01};
-    width: 300px;
+    width: 80%;
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -26,10 +27,6 @@ export const Wrapper = styled.div`
 
     .dashed-border {
         margin-top: 3em;
-    }
-
-    @media (max-width: 850px) {
-        display: none;
     }
 `;
 
@@ -152,9 +149,14 @@ SideBarItem.defaultProps = {
 
 // End of sidebar Item
 
-// SideBar, default export
+// MobileMenu, default export
 
-const SideBar = () => {
+type IProps = {
+    openSideDrawer: boolean;
+    onCloseSideDrawer: () => void;
+};
+
+const MobileMenu = ({ openSideDrawer, onCloseSideDrawer }: IProps) => {
     const [showDropdown, setShowDropdown] = useState(false);
     const dropdownMenu = useRef<HTMLDivElement>(null);
     const dropdownButton = useRef<HTMLDivElement>(null);
@@ -177,44 +179,59 @@ const SideBar = () => {
     }, []);
 
     return (
-        <Wrapper>
-            <SidebarMain>
-                <UserInfoContainer>
-                    <UserInfo>
-                        <UserCircle>BN</UserCircle>
-                        <div className="name-account">
-                            <p className="business-name">Clayvant Inc</p>
-                            <p className="manage-account">Manage account</p>
-                        </div>
-                    </UserInfo>
-                    <DropdownBtn onClick={toggleDropDown} ref={dropdownButton}>
-                        <img src={CaretDown} alt="dropdown button" />
-                    </DropdownBtn>
-                </UserInfoContainer>
+        <Modal
+            open={openSideDrawer}
+            onClose={onCloseSideDrawer}
+            animationDuration={150}
+            showCloseIcon={false}
+            classNames={{
+                modal: 'SideDrawer-modal',
+                overlay: 'SideDrawer-overlay',
+                overlayAnimationIn: 'customEnterOverlayAnimation',
+                overlayAnimationOut: 'customLeaveOverlayAnimation',
+                modalAnimationIn: 'customEnterModalAnimation',
+                modalAnimationOut: 'customLeaveModalAnimation',
+            }}
+        >
+            <Wrapper>
+                <SidebarMain>
+                    <UserInfoContainer>
+                        <UserInfo>
+                            <UserCircle>BN</UserCircle>
+                            <div className="name-account">
+                                <p className="business-name">Clayvant Inc</p>
+                                <p className="manage-account">Manage account</p>
+                            </div>
+                        </UserInfo>
+                        <DropdownBtn onClick={toggleDropDown} ref={dropdownButton}>
+                            <img src={CaretDown} alt="dropdown button" />
+                        </DropdownBtn>
+                    </UserInfoContainer>
 
-                {showDropdown && (
-                    <Dropdown ref={dropdownMenu}>
-                        <DropdownItem className="active has-border">Clayvant Inc</DropdownItem>
-                        <DropdownItem className="has-border">Business name 2</DropdownItem>
-                        <DropdownItem>Business name 3</DropdownItem>
-                        <div className="add-business">Add a business</div>
-                    </Dropdown>
-                )}
+                    {showDropdown && (
+                        <Dropdown ref={dropdownMenu}>
+                            <DropdownItem className="active has-border">Clayvant Inc</DropdownItem>
+                            <DropdownItem className="has-border">Business name 2</DropdownItem>
+                            <DropdownItem>Business name 3</DropdownItem>
+                            <div className="add-business">Add a business</div>
+                        </Dropdown>
+                    )}
 
-                <SideBarItems>
-                    <SideBarItem text="invoice" image={InvoiceIcon} />
-                    <SideBarItem text="management" />
-                    <SideBarItem text="security" />
-                    <SideBarItem text="support" />
-                    <SideBarItem text="settings" />
-                    <SideBarItem text="privacy" />
-                </SideBarItems>
-            </SidebarMain>
-            <div>
-                <img src={Logo} alt="prospa-logo" />
-            </div>
-        </Wrapper>
+                    <SideBarItems>
+                        <SideBarItem text="invoice" image={InvoiceIcon} />
+                        <SideBarItem text="management" />
+                        <SideBarItem text="security" />
+                        <SideBarItem text="support" />
+                        <SideBarItem text="settings" />
+                        <SideBarItem text="privacy" />
+                    </SideBarItems>
+                </SidebarMain>
+                <div>
+                    <img src={Logo} alt="prospa-logo" />
+                </div>
+            </Wrapper>
+        </Modal>
     );
 };
 
-export default SideBar;
+export default MobileMenu;
